@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model(DOM)</title>
+</head>
+<body>
+  <button class="first-btn">Click me</button>
+  <button class="second-btn">Second button</button>
+  <script>
+    //This code changed the element inside the first button tag.
+    document.querySelector('button').innerHTML = "Query Button";
+    //This code changed the element inside the second class button tag.(Class selector);
+    const secondButton = document.querySelector('.second-btn');
+    console.log(secondButton);
+
+    /*
+    document.body.innerHTML = 'Hello';
+    document.title = "DOM"
+    */
+
+    // console.log(typeof(document.body));
+    // document.body.innerHTML= '<button>Changed</button>';
+  </script>
+</body>
+</html>
