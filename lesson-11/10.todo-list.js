@@ -1,4 +1,17 @@
-const todoList = [];
+const todoList = ["wash dishes", "cook food"];
+
+function renderList () {
+  let todoListHtml = '';
+
+for(let i = 0; i< todoList.length; i++) {
+  let list = todoList[i];
+  const html = `<p>${list}</p>`;
+  todoListHtml += html;
+}
+
+console.log(todoList);
+document.querySelector('.todoList-result').innerHTML = todoListHtml;
+}
 
 
 function addTodo() {
@@ -6,6 +19,8 @@ function addTodo() {
   const name = inputTodo.value;
   todoList.push(name);
   inputTodo.value = '';
+
+  renderList()
 }
 /*
 let i = 1;
