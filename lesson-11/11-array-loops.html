@@ -66,9 +66,47 @@
       // console.log(secondValue);
       // console.log(thirdValue);
 
-      
-      
 
+      // for (let a  = 0; a <= 10; a++){
+      //   if(a === 3) {
+      //     break;
+      //   // break will stop when a = 3.
+      //   }
+      //   console.log(a)
+
+      //   // if (a === 8) {
+      //   //   continue;
+      //   //   //continue will skip number 8
+      //   // }
+      //   // console.log(a)
+      //  }
+      let i = 1;
+      while ( i <= 10) {
+        if(i%3 === 1) {
+          i++;
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+
+      //how to use loops with function.
+     function numberDouble (nums) {
+      let numDouble = [];
+      
+      for(let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (num === 0) {
+          return numDouble;
+        }
+        numDouble.push(num * 2)
+      }
+
+      return nums;
+     }
+
+     console.log(numberDouble([2,6,8]))
+     console.log(numberDouble([100, 200, 300]))
 
     </script>
 </body>
