@@ -1,26 +1,25 @@
 const todoList = ["wash dishes", "cook food"];
 
-function renderList () {
-  let todoListHtml = '';
+function renderList() {
+  let todoListHtml = "";
 
-for(let i = 0; i< todoList.length; i++) {
-  let list = todoList[i];
-  const html = `<p>${list}</p>`;
+  for (let i = 0; i < todoList.length; i++) {
+    let list = todoList[i];
+    const html = `<p>${list}</p>`;
   todoListHtml += html;
-}
+  }
 
-console.log(todoList);
-document.querySelector('.todoList-result').innerHTML = todoListHtml;
+  console.log(todoList);
+  document.querySelector(".todoList-result").innerHTML = todoListHtml;
 }
-
 
 function addTodo() {
-  const inputTodo = document.querySelector('.input-todo');
+  const inputTodo = document.querySelector(".input-todo");
   const name = inputTodo.value;
   todoList.push(name);
-  inputTodo.value = '';
+  inputTodo.value = "";
 
-  renderList()
+  renderList();
 }
 /*
 let i = 1;
@@ -41,5 +40,3 @@ while(randomNumber < 0.5) {
 
 console.log(randomNumber); 
 */
-
- 
