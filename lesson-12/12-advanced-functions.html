@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12-advanced-functions</title>
+</head>
+<body>
+    <script>
+        /*
+        function greeting () {
+            console.log('Good morning')
+        }
+        greeting();
+
+        //functions are also variables
+        //we can save a function inside a variables.
+
+        const  num = 2;
+        const function1 = function greeting(){
+            console.log("Good afternoon");
+        }
+        console.log(function1);
+        console.log(`i am a ${typeof(function1)}`)
+        function1(); 
+        
+        const object1 = {
+            num : 2,
+            //in this case, we don't need a function name.
+            func : function() {
+                console.log("Good night")
+            }
+
+        };
+
+        object1.func(); // for call the function inside the object.
+        console.log(object1.num)
+
+
+        // =======  passing a function into another function  =========
+        function run (param) {
+            param();
+        }
+
+        run(function sayHello( ) {
+            console.log('Hello guys')
+        })
+        */
+
+        setTimeout(function(){
+            console.log('TimeOUT')
+        }, 3000);
+        // in this case, the below code displayed before the above, is called asynchronous code.
+        console.log('Asynchronous code')
+
+
+        //all the code we wrote are synchronous like console.log('1'), console.log('2') etc.
+ 
+</script>
+</body>
+</html>
