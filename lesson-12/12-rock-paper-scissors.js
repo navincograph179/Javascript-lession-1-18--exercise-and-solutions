@@ -15,12 +15,45 @@ if (!score) {
 */
 updateScoreElement();
 
+let isAutoPlay = false;
+let intervalId;
+//intervalId means, when the setinterval(), it provide different id.
 function autoPlay () {
-  setInterval(function(){
-    const playerMove = pickComputerMove();
-    playGame(playerMove)
-  }, 1000)
+  if(!isAutoPlay) {
+    intervalId = setInterval(()=>{
+      const playerMove = pickComputerMove();
+      playGame(playerMove)
+    }, 1000)
+    isAutoPlay = true;
+  }
+  else {
+    clearInterval(intervalId);
+    isAutoPlay = false;
+  }
 };
+
+document.querySelector('.js-button-rock').addEventListener('click', ()=> {
+  playGame('rock')
+});
+document.querySelector('.js-button-paper').addEventListener('click', ()=> {
+  playGame('paper')
+});
+document.querySelector('.js-button-scissors').addEventListener('click', ()=> {
+  playGame('scissors')
+});
+
+
+document.body.addEventListener('keydown', (e) => {
+  if(e.key === 'r') {
+    playGame('rock');
+  }
+  else if (e.key === 'p') {
+    playGame('paper');
+  }
+  else if (e.key === 's') {
+    playGame('scissors')
+  }
+})
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();

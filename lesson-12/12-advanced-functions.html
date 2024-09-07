@@ -6,7 +6,23 @@
     <title>12-advanced-functions</title>
 </head>
 <body>
+
+    <button onclick="" class="js-button">click</button>
     <script>
+        /*
+        const buttonElement = document.querySelector('.js-button');
+
+        const eventListener = () => {
+            console.log('click')
+        }
+        buttonElement.addEventListener('click',eventListener);
+        
+        buttonElement.removeEventListener('click', eventListener)
+
+        buttonElement.addEventListener('click', ()=> {
+            console.log('click2')
+        })
+        */
         /*
         function greeting () {
             console.log('Good morning')
@@ -45,7 +61,7 @@
         run(function sayHello( ) {
             console.log('Hello guys')
         })
-        */
+       
 
         setTimeout(function(){
             console.log('TimeOUT')
@@ -55,7 +71,29 @@
 
 
         //all the code we wrote are synchronous like console.log('1'), console.log('2') etc.
- 
+  */
+
+ /*
+  [
+        'make dinner',
+        'wash dishes',
+        'watch youtube',
+  ].forEach((value, index)=> {
+    console.log(`index of ${index} ${value}`);
+  });
+
+  const arrowFunction = (param1, param2) => {
+    console.log(param1+param2)
+  };
+
+  arrowFunction(10, 3)
+ //the below code is oneLine arrow Function.
+  const oneLine = () => 2+3;
+  console.log(oneLine());
+*/
+
+
+
 </script>
 </body>
 </html>
