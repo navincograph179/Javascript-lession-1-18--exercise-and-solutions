@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Loops</title>
+</head>
+<body>
+
+    <script>
+      // const myArray = [10, 20, 30];
+      // console.log(myArray);
+      // console.table(myArray);
+      // const myArrayOne = [10, 'hello', {name : 'john'}, [1,2,3,4]];
+      // console.table(myArrayOne);
+
+      // console.log(myArrayOne.length);
+      // myArrayOne.push('pushed');
+      // console.log(myArrayOne);
+
+      // myArray.splice(0, 1);
+      // console.log(myArray);
+
+
+      // const todoList = [
+      // 'Person 1',
+      // 'Person 2',
+      // 'Person 3',
+      // 'Person 4'
+      // ]
+
+      // for (let i = 0; i < todoList.length; i ++) {
+      //   console.log(todoList[i])
+      // }
+      
+     /* const numbers = [1, 5, 8, 100];
+      let total = 0;
+      
+      for(let i = 0; i < numbers.length; i++) {
+        const num = numbers[i];
+        total += num;
+      }
+
+      console.log(total);
+
+      const nums = [1, 5, 8, 100];
+      let numDouble = [];
+      
+      for(let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        numDouble.push(num * 2)
+      }
+
+      console.log(numDouble);
+      */
+
+      // const array = [1,2,3,4,5,6];
+      // const array2 = array.slice();
+      // //the slice method only effect the copy array but not a original.
+      // array2.push(4);
+      // console.log(array) 
+      // console.log(array2)
+
+      // const [firstValue, secondValue, thirdValue] = [1, 2, 3];
+      // console.log(firstValue);
+      // console.log(secondValue);
+      // console.log(thirdValue);
+
+
+      // for (let a  = 0; a <= 10; a++){
+      //   if(a === 3) {
+      //     break;
+      //   // break will stop when a = 3.
+      //   }
+      //   console.log(a)
+
+      //   // if (a === 8) {
+      //   //   continue;
+      //   //   //continue will skip number 8
+      //   // }
+      //   // console.log(a)
+      //  }
+      let i = 1;
+      while ( i <= 10) {
+        if(i%3 === 1) {
+          i++;
+          continue;
+        }
+        console.log(i);
+        i++;
+      }
+
+      //how to use loops with function.
+     function numberDouble (nums) {
+      let numDouble = [];
+      
+      for(let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        if (num === 0) {
+          return numDouble;
+        }
+        numDouble.push(num * 2)
+      }
+
+      return nums;
+     }
+
+     console.log(numberDouble([2,6,8]))
+     console.log(numberDouble([100, 200, 300]))
+
+    </script>
+</body>
+</html>
